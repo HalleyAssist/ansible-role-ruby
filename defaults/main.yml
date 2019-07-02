@@ -1,6 +1,7 @@
 ---
 workspace: /root
 
+ruby_source_cflags: "-O3"
 # Whether this role should install Bundler.
 ruby_install_bundler: true
 
