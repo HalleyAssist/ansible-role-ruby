@@ -61,7 +61,7 @@
     - "{{ ruby_source_make_command }}"
     - "{{ ruby_source_make_command }} install"
   environment:
-    RUBY_CFLAGS: "-O3 -march=native"
+    CFLAGS: "{{ruby_source_cflags}}"
   
 - name: Clone Ruby
   git:
@@ -87,5 +87,5 @@
     - "{{ ruby_source_make_command }}"
     - "{{ ruby_source_make_command }} install"
   environment:
-    RUBY_CFLAGS: "-O3 -march=native"
+    CFLAGS: "{{ruby_source_cflags}}"
   when: ruby_download_git != False
